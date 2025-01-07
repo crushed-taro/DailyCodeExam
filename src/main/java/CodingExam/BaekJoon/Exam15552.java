@@ -1,26 +1,28 @@
 package CodingExam.BaekJoon;
 
 import java.io.*;
+import java.util.StringTokenizer;
 
 public class Exam15552 {
 
-    public static void main(String[] args) throws IOException {
+    public static void main(String args[]) throws IOException {
 
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        long num = Integer.parseInt(br.readLine());
+        BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
 
-        BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));   //할당된 버퍼에 값 넣어주기
+        int T = Integer.parseInt(br.readLine());
 
-        int A = 0;
-        int B = 0;
-        for(int i = 0; i < num; i++) {
-            A = Integer.parseInt(br.readLine());
-            B = Integer.parseInt(br.readLine());
-            bw.write(A + B);
+        StringTokenizer st;
+
+        for(int i=0; i<T; i++){
+            st = new StringTokenizer(br.readLine()," ");
+            int N = Integer.parseInt(st.nextToken());
+            int M = Integer.parseInt(st.nextToken());
+            bw.write((N + M) + "\n");
         }
-        bw.flush();
-
         br.close();
+
+        bw.flush();
         bw.close();
 
     }
