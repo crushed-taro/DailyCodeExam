@@ -5,6 +5,8 @@ import java.util.List;
 
 public class ArraysPratice {
 
+    // 정렬, 탐색, 복사, 변환 등 유틸리티(정적 메서드)를 제공
+
     public static void main(String[] args) {
         System.out.println("=== 배열 출력, 정렬, 탐색 ===");
         beginnerTask();
