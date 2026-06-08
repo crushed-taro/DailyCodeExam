@@ -87,6 +87,7 @@ public class CollectionsPractice {
         Collections.shuffle(transactions);
         System.out.println("샘플링 데이터 셔플 완료 : " + transactions);
 
+        // 불변 보호막 : 외부 레이어나 타사 API로 데이터를 넘겨줄 떄, 원본 리스트의 무결성을 지키기 위해 사용.
         List<Integer> finalResultData = Collections.unmodifiableList(transactions);
 
         System.out.println("--- 테넌트 결제 메트릭 리포트 ---");
