@@ -12,6 +12,9 @@ public class IntegerPractice {
         System.out.println("=== 인프라 환경 설정 파서 ===");
         miniProject();
         System.out.println();
+        System.out.println("=== 비트 단위 옵션 활성화 개수 파악 ===");
+        advancedTask();
+        System.out.println();
     }
 
     private static void beginnerTask() {
@@ -94,6 +97,20 @@ public class IntegerPractice {
         String verifyBin = Integer.toBinaryString(permissions);
         System.out.println("권한 플래그 원본 역검증 일치 여부 : " + verifyBin.equals(rawPermissionBin));
 
+    }
+
+    private static void advancedTask() {
+        int permissions = Integer.parseInt("1101", 2);
+        int activeRoles = Integer.bitCount(permissions);
+
+        System.out.println("권한 플래그 원본 (2진수) : " + Integer.toBinaryString(permissions));
+        System.out.println("현재 부여된 총 권한의 개수 : " + activeRoles + "개");
+
+        int subnetMask = 0xFFFFFF00;
+        int networkPrefix = Integer.bitCount(subnetMask);
+
+        System.out.println("\n서브넷 마스크 (16진수) : " + Integer.toHexString(subnetMask).toUpperCase());
+        System.out.println("네트워크 대역(CIDR) : /" + networkPrefix);
     }
 
 }
