@@ -61,6 +61,11 @@ public class PriorityQueuePractice {
         }
         System.out.println();
 
+        /*
+            Heap 트리의 함정 : PriorityQueue는 내부적으로 완벽한 정렬을 유지하지 않음. "부모 노드는 자식 노드보다 항상 크다(혹은 작다)"는 규칙만 유지하는 '트리' 형태
+            따라서 poll()로 떠낼 때마다 1등을 다시 계산해서 뽑아주는 것이지, 대기열 안에 일렬로 예쁘게 서 있는 것이 아님을 명심해야 함.
+         */
+
     }
 
     static class Ticket {
